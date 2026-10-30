@@ -1,0 +1,35 @@
+[
+  {
+    "id": "seed-1",
+    "title": "Web Development Workshop",
+    "category": "Workshop",
+    "date": "2026-11-05",
+    "time": "10:00",
+    "location": "Computer Lab 2",
+    "description": "Build and deploy your first responsive web application.",
+    "registrations": 18,
+    "createdAt": "2026-10-20T09:00:00.000Z"
+  },
+  {
+    "id": "seed-2",
+    "title": "Campus Coding Challenge",
+    "category": "Competition",
+    "date": "2026-11-12",
+    "time": "09:30",
+    "location": "Seminar Hall",
+    "description": "Team up, solve programming problems, and learn from other students.",
+    "registrations": 32,
+    "createdAt": "2026-10-20T09:00:00.000Z"
+  },
+  {
+    "id": "seed-3",
+    "title": "AI and Innovation Meetup",
+    "category": "Meetup",
+    "date": "2026-11-18",
+    "time": "14:00",
+    "location": "Innovation Hub",
+    "description": "Discuss practical AI ideas and student-led projects.",
+    "registrations": 12,
+    "createdAt": "2026-10-20T09:00:00.000Z"
+  }
+]

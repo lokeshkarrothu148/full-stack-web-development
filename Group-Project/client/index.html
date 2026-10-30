@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CampusConnect helps students discover and manage campus events.">
+  <title>CampusConnect | Campus Events</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="CampusConnect home"><span class="brand-mark">C</span><span>Campus<span class="brand-accent">Connect</span></span></a>
+    <nav><a class="nav-active" href="#events">Explore events</a><a href="#create">Create event</a></nav>
+    <span class="status-pill"><span class="status-dot"></span> Student hub</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR CAMPUS. YOUR COMMUNITY.</p>
+        <h1>Make campus life<br><span>count.</span></h1>
+        <p class="hero-text">Discover events, meet your people, and turn ideas into experiences worth remembering.</p>
+        <a class="button button-light" href="#events">Explore events <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="art-card art-card-main"><span class="art-icon">✳</span><strong>Find your<br>next thing.</strong><small>Learn · Build · Belong</small></div>
+        <div class="floating-note note-top">✦ New ideas</div><div class="floating-note note-bottom">↗ Good people</div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Event statistics">
+      <div class="stat"><span class="stat-icon purple">✦</span><div><strong id="stat-total">0</strong><span>Events listed</span></div></div>
+      <div class="stat"><span class="stat-icon green">✓</span><div><strong id="stat-registrations">0</strong><span>Total registrations</span></div></div>
+      <div class="stat"><span class="stat-icon orange">◷</span><div><strong id="stat-upcoming">0</strong><span>Upcoming events</span></div></div>
+    </section>
+
+    <section id="events" class="events-section">
+      <div class="section-heading"><div><p class="eyebrow">WHAT'S HAPPENING</p><h2>Explore campus events</h2><p class="section-subtitle">There is always something to learn, make, or celebrate.</p></div><a href="#create" class="button button-primary">＋ Create event</a></div>
+      <div class="toolbar">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search events or locations..." aria-label="Search events"></label>
+        <label class="filter-label"><span class="sr-only">Filter by category</span><select id="category-filter"><option value="all">All categories</option><option>Workshop</option><option>Competition</option><option>Meetup</option><option>Cultural</option><option>Sports</option><option>Other</option></select></label>
+        <label class="filter-label"><span class="sr-only">Sort events</span><select id="sort-filter"><option value="soonest">Soonest first</option><option value="latest">Latest first</option><option value="popular">Most registered</option></select></label>
+      </div>
+      <p id="result-count" class="result-count" aria-live="polite"></p>
+      <div id="event-grid" class="event-grid"><div class="loading">Loading events…</div></div>
+    </section>
+
+    <section id="create" class="create-section">
+      <div class="create-intro"><p class="eyebrow">BRING PEOPLE TOGETHER</p><h2>Have an idea?<br><span>Make it happen.</span></h2><p>Host a workshop, a competition, a meetup, or anything that makes campus life better.</p><div class="create-decoration">✳</div></div>
+      <form id="event-form" class="event-form">
+        <h3>Create an event</h3><p class="form-subtitle">Fields marked * are required.</p>
+        <label>Event title *<input name="title" required maxlength="100" placeholder="e.g. Design Thinking Workshop"></label>
+        <div class="form-row">
+          <label>Category *<select name="category" required><option value="">Select category</option><option>Workshop</option><option>Competition</option><option>Meetup</option><option>Cultural</option><option>Sports</option><option>Other</option></select></label>
+          <label>Date *<input name="date" type="date" required></label>
+        </div>
+        <div class="form-row">
+          <label>Time *<input name="time" type="time" required></label>
+          <label>Location *<input name="location" required maxlength="120" placeholder="e.g. Seminar Hall"></label>
+        </div>
+        <label>Description<textarea name="description" maxlength="500" rows="3" placeholder="What should students know?"></textarea></label>
+        <button class="button button-primary submit-button" type="submit">Publish event <span aria-hidden="true">↗</span></button>
+        <p id="form-message" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="/"><span class="brand-mark">C</span><span>Campus<span class="brand-accent">Connect</span></span></a><p>Made for students, powered by community.</p><span>CampusConnect · Student project</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
